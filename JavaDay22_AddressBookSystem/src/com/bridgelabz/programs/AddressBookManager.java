@@ -6,6 +6,8 @@ import java.util.List;
 
 import java.util.Scanner;
 
+import com.bridglabz.programs.PersonDetails;
+
 public class AddressBookManager {
 	List<PersonDetails> addressBookList = new ArrayList();
 	Scanner sc = new Scanner(System.in);
@@ -122,5 +124,14 @@ public class AddressBookManager {
 				 break;
 		}
 		System.out.println("Updated details = "+bookitem);
+	}
+	
+	//------------------------method to remove person details----------------
+	void removePersonDetails() {
+		System.out.print("Enter person name: ");
+		String name = sc.next();
+		PersonDetails personDetails = getperson(name);
+		addressBookList.remove(personDetails);
+		System.out.print("Deleted contact = "+personDetails);
 	}
 }
