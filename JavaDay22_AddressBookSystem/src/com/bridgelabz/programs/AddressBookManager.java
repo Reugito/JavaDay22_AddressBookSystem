@@ -140,12 +140,14 @@ public class AddressBookManager {
 		}
 	}
 	
+	//------------------------method to store multiple address books----------------
 	public void storeCurrentAddressBook() {
 		System.out.println("Enter name for address book: ");
 		String addressBookName = sc.next();
 		storeAddressBooks.put(addressBookName, addressBookList);
 	}
 	
+	//------------------------method to print all address books from system ----------------
 	public void printAddressBooks() {
 		System.out.println(storeAddressBooks);
 		System.out.println("---------------Address book is stored-------------- ");
@@ -156,7 +158,8 @@ public class AddressBookManager {
 		return "AddressBookManager [storeAddressBooks=" + storeAddressBooks + ", addressBookList=" + addressBookList
 				+ ", sc=" + sc + "]";
 	}
-
+	
+	//------------------------method to create new address book----------------
 	public void creatNewAddressBooks() {
 		addressBookList.clear();
 		System.out.println("---------------New Address book is created-------------- ");
