@@ -16,8 +16,6 @@ public class AddressBookManager {
 	
 	//----------------method to add person details--------
 	void addPersonDetails(){
-		Scanner sc = new Scanner(System.in);
-		
 		System.out.print("Enter firstName: ");
 		String firstName = sc.next();
 		System.out.print("Enter lastName: ");
@@ -63,7 +61,6 @@ public class AddressBookManager {
 	
 	//----------------method to update person details--------
 	void updatePersonDetails() {
-		
 		System.out.print("Enter person name: ");
 		String item = sc.next();
 		PersonDetails bookitem = getperson(item);
