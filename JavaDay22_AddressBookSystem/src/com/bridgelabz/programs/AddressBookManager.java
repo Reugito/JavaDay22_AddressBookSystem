@@ -1,12 +1,15 @@
 package com.bridgelabz.programs;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
-
+import java.util.Map;
 import java.util.Scanner;
 
 public class AddressBookManager {
+	
+	Map<String, List> storeAddressBooks = new HashMap();
 	List<PersonDetails> addressBookList = new ArrayList();
 	Scanner sc = new Scanner(System.in);
 	
@@ -135,5 +138,27 @@ public class AddressBookManager {
 		for(PersonDetails Items: addressBookList) {
 			System.out.println(Items);
 		}
+	}
+	
+	public void storeCurrentAddressBook() {
+		System.out.println("Enter name for address book: ");
+		String addressBookName = sc.next();
+		storeAddressBooks.put(addressBookName, addressBookList);
+	}
+	
+	public void printAddressBooks() {
+		System.out.println(storeAddressBooks);
+		System.out.println("---------------Address book is stored-------------- ");
+	}
+
+	@Override
+	public String toString() {
+		return "AddressBookManager [storeAddressBooks=" + storeAddressBooks + ", addressBookList=" + addressBookList
+				+ ", sc=" + sc + "]";
+	}
+
+	public void creatNewAddressBooks() {
+		addressBookList.clear();
+		System.out.println("---------------New Address book is created-------------- ");
 	}
 }

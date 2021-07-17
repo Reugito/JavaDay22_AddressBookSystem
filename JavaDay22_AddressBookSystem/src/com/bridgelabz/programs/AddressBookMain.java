@@ -20,6 +20,9 @@ public class AddressBookMain {
 			System.out.println("3. Remove person from address Book");
 			System.out.println("4. get person detai from address Book");
 			System.out.println("5. Print Address Book");
+			System.out.println("6. Store current address book to the system");
+			System.out.println("7. Print all Address Books from system");
+			System.out.println("8. creat new address book");
 			int choice = sc.nextInt();
 			switch(choice) {
 			case 1:
@@ -39,6 +42,15 @@ public class AddressBookMain {
 				break;
 			case 5:
 				mainObj.addressBookManager.printPersonDetails();
+				break;
+			case 6:
+				mainObj.addressBookManager.storeCurrentAddressBook();
+				break;
+			case 7:
+				mainObj.addressBookManager.printAddressBooks();
+				break;
+			case 8:
+				mainObj.addressBookManager.creatNewAddressBooks();
 				break;
 			default:
 				flag = false;
