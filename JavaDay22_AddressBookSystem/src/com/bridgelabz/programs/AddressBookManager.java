@@ -45,7 +45,15 @@ public class AddressBookManager {
 		personDetails.setEmail(email);
 		personDetails.setZip(zip);
 		personDetails.setPhoneNumber(phoneNumber);
-		addPerson(personDetails);
+		
+		if(addressBookList.size() == 0)
+			addPerson(personDetails);
+		else {
+			addressBookList.stream().forEach(i -> {if(i.getFirstName().contains(firstName)) { 
+				System.out.println("***********************Person Details already exist in addressbook ***********************");
+				return;
+			}addPerson(personDetails);});
+		}
 	}
 
 	//----------------method to get person details--------
