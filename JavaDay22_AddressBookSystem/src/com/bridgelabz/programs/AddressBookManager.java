@@ -46,6 +46,8 @@ public class AddressBookManager {
 		personDetails.setZip(zip);
 		personDetails.setPhoneNumber(phoneNumber);
 		
+		
+		//-----------------------------method to check duplicate elements------------
 		if(addressBookList.size() == 0)
 			addPerson(personDetails);
 		else {
